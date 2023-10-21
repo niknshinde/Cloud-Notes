@@ -20,6 +20,18 @@ router.get('/fetchallnotes',fetchuser,async(req,res)=>{
    
 });
 
+router.get('/fetchnotes/::id', fetchuser, async (req, res) => {
+    // Your code here
+    try {
+        let notes = await Notes.findById(req.params.id);
+        res.json(notes);  
+    } catch (error) {
+        console.error(error.mesage);
+        res.status(500).send("internal server error");
+    }
+   
+});
+
 
 //adding new notes 
 

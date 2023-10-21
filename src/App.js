@@ -12,6 +12,7 @@ import SignUP from './components/SignUP';
 import AlertSate from './context/alerts/AlertSate';
 import Alert from './components/Alert';
 import { useState } from 'react';
+import NoteDetail from './components/NoteDetail';
 
 
 
@@ -43,6 +44,8 @@ function App() {
           <Route path="/about" element={<About1 />} />
           <Route path="/login" element={<Login showAlert={showAlert}/>} />
           <Route path="/signup" element={<SignUP showAlert={showAlert}/>} />
+          <Route path="/blogs/:id" element={<NoteDetail />} />
+
 
         </Routes>
         </div>

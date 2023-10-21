@@ -15,3 +15,26 @@ code {
 i{
   cursor: pointer;
 }
+
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: red;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect styles */
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow on hover */
+}

@@ -5,6 +5,7 @@ import { useState } from "react";
 //arrow fuction
 
 export const NoteState = (props) => {
+  // const id = props.id;
   const host = "http://localhost:5000";
   const notesInitial = [];
 
@@ -12,6 +13,19 @@ export const NoteState = (props) => {
 
   const getNotes = async () => {
     const response = await fetch(`${host}/api/notes/fetchallnotes`, {
+      method: "GET", // *GET, POST, PUT, DELETE, etc.
+
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token":localStorage.getItem('token')      },
+    });
+    const json = await response.json();
+    setnote(json);
+    
+  };
+
+  const getOneNotes = async (id) => {
+    const response = await fetch(`${host}/api/notes/fetchnotes/${id}`, {
       method: "GET", // *GET, POST, PUT, DELETE, etc.
 
       headers: {
@@ -96,7 +110,7 @@ export const NoteState = (props) => {
     }
   };
   return (
-    <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote,getNotes }}>
+    <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote,getNotes,getOneNotes }}>
       {props.children}
     </NoteContext.Provider>
   );
