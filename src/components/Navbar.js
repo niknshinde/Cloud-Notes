@@ -18,8 +18,8 @@ function Navbar() {
 
   } , [location]);
   return (
-
-    <nav className="navbar navbar-expand-lg  navbar-dark bg-dark">
+<>
+    <nav className="navbar navbar-expand-lg">
   <div className="container-fluid">
     <Link className="navbar-brand" to="/">CloudNotes</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,16 +31,19 @@ function Navbar() {
           <Link className={`nav-link ${location.pathname === "/" ? "active" : ""}`} aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} to="/about">About</Link>
+          <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} to="/about">About Us</Link>
         </li>
         </ul>
       {!localStorage.getItem('token') ? <form className="d-flex" role="search">
-      <Link to="/login" className="btn btn-primary btn-lg active mx-2" role="button" aria-pressed="true">Login</Link>
-      <Link to="/signup" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">sign up</Link>
-      </form> : <button onClick={handelLogOut} className='btn btn-primary' >Log-Out</button>}
+      <Link to="/login" className="custom-button  mx-2" role="button" aria-pressed="true">Login</Link>
+      <Link to="/signup" className="custom-button active" role="button" aria-pressed="true">sign up</Link>
+      </form> : <button onClick={handelLogOut} className='custom-button' >Log-Out</button>}
     </div>
   </div>
 </nav>
+{/* <hr/> */}
+
+</>
   )
 }
 

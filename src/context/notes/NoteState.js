@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export const NoteState = (props) => {
   // const id = props.id;
-  const host = "http://localhost:5000";
+  const host = "https://cloud-note-backend.onrender.com";
   const notesInitial = [];
 
   const [notes, setnote] = useState(notesInitial);

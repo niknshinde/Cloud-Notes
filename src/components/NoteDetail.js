@@ -4,7 +4,7 @@ import React from 'react';
 
 const NoteDetail = () => {
   const { id } = useParams();
-  const host = 'http://localhost:5000';
+  const host = 'https://cloud-note-backend.onrender.com';
 
 
   const [note, setNote] = useState(null);
