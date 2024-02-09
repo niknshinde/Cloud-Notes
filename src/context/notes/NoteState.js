@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export const NoteState = (props) => {
   // const id = props.id;
-  const host = "https://cloud-note-backend.onrender.com";
+  const host = "https://backend-cloud-note-git-main-niknshindes-projects.vercel.app";
   const notesInitial = [];
 
   const [notes, setnote] = useState(notesInitial);

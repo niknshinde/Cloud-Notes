@@ -17,7 +17,7 @@ const Login = (props) => {
     const handelSubmit = async(e)=>{
         e.preventDefault();
         try {
-            const response = await fetch('https://cloud-note-backend.onrender.com/api/auth/login', {
+            const response = await fetch('https://backend-cloud-note-git-main-niknshindes-projects.vercel.app/api/auth/login', {
                 method: "POST", // *GET, POST, PUT, DELETE, etc.
           
                 headers: {

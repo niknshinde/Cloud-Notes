@@ -4,7 +4,7 @@ import React from 'react';
 
 const NoteDetail = () => {
   const { id } = useParams();
-  const host = 'https://cloud-note-backend.onrender.com';
+  const host = 'https://backend-cloud-note-git-main-niknshindes-projects.vercel.app';
 
 
   const [note, setNote] = useState(null);

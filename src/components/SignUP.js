@@ -15,7 +15,7 @@ const SignUP = (props) => {
       e.preventDefault();
       const{name,email,password} = credentials;
       try {
-          const response = await fetch('https://cloud-note-backend.onrender.com/api/auth/createuser', {
+          const response = await fetch('https://backend-cloud-note-git-main-niknshindes-projects.vercel.app/api/auth/createuser', {
               method: "POST", // *GET, POST, PUT, DELETE, etc.
         
               headers: {
